@@ -1,12 +1,13 @@
 name: schedule job
-  on:
-    scheulde: 
-      - cron "0 0 * * *"
+
+on:
+  schedule:    # Spelling correct ki
+    - cron: "0 0 * * *"   # Midnight daily (UTC)
+
 jobs: 
   run-script: 
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest   # Indentation theek ki
 
-  steps:
-  - name: print message
-  run: echo "execute hogya g"
-  
+    steps:
+      - name: print message
+        run: echo "execute hogya g"
